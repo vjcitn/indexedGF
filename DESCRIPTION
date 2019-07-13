@@ -1,0 +1,16 @@
+Package: indexedGF
+Title: GenomicFiles applied to vroom-indexed remote tables
+Description: Apply GenomicFiles and vroom to remote table sets.
+Version: 0.0.0
+Author: Vince Carey
+Suggests: knitr
+Depends: vroom, GenomicFiles
+Imports: dplyr, magrittr, BiocParallel
+Maintainer: VJ Carey <stvjc@channing.harvard.edu>
+License: Artistic-2.0
+LazyLoad: yes
+LazyData: yes
+biocViews: variants
+VignetteBuilder: knitr
+RoxygenNote: 6.1.1
+Encoding: UTF-8
