@@ -11,11 +11,14 @@ vroomIn(igf, itmeth = lapply)
 
 \item{itmeth}{a function, defaults to lapply}
 }
+\value{
+An updated indexedGF instance; there may be try-error instances in the vrlist slot.
+}
 \description{
 populate an indexedGF by running vroom over the files() component
 }
 \note{
-For applications over HTTP parallelized ingestion can generate certification errors
+For applications over HTTP parallelized ingestion can generate certification errors.
 }
 \examples{
 nigf = indexedGF::WHRadjBMI_gf

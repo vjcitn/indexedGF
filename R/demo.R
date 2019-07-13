@@ -43,7 +43,8 @@ setMethod("saveIGF", c("indexedGF", "character"), function(x, file) {
 #' @importFrom BiocParallel bplapply
 #' @param igf an indexedGF instance
 #' @param itmeth a function, defaults to lapply
-#' @note For applications over HTTP parallelized ingestion can generate certification errors
+#' @note For applications over HTTP parallelized ingestion can generate certification errors.
+#' @return An updated indexedGF instance; there may be try-error instances in the vrlist slot.
 #' @examples
 #' nigf = indexedGF::WHRadjBMI_gf
 #' nigf
@@ -51,7 +52,7 @@ setMethod("saveIGF", c("indexedGF", "character"), function(x, file) {
 #' tst
 #' @export
 vroomIn = function(igf, itmeth=lapply) {
- indrefs = itmeth(files(igf), vroom)
+ indrefs = itmeth(files(igf), function(x) try(vroom(x)))
  igf@vrlist = indrefs
  igf
 }
