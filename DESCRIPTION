@@ -1,7 +1,7 @@
 Package: indexedGF
 Title: GenomicFiles applied to vroom-indexed remote tables
 Description: Apply GenomicFiles and vroom to remote table sets.
-Version: 0.0.2
+Version: 0.0.4
 Author: Vince Carey
 Suggests: knitr
 Depends: vroom, GenomicFiles
