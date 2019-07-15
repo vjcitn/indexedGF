@@ -57,8 +57,15 @@ vroomIn = function(igf, itmeth=lapply) {
  igf
 }
 
+#' access vroom-based list
+#' @export
+vrlist = function(x) x@vrlist
+
 setMethod("show", "indexedGF", function(object) {
  cat(sprintf("indexedGF for %s files.\n", length(files(object))))
  if (length(object@vrlist)==0) cat("vrlist is empty.\n") else cat("vrlist is populated.\n")
- cat("Use vroomIn() to populate if needed, saveIGF() to serialize.\n")
+ cat("colData fields:\n   ")
+ cat(Biobase::selectSome(names(colData(object))), "\n")
+ cat("Use vroomIn() to populate if needed.\n")
+ cat("slot(,'vrlist') <- list() before serializing.\n")
 })

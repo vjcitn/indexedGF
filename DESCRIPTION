@@ -5,7 +5,7 @@ Version: 0.0.4
 Author: Vince Carey
 Suggests: knitr
 Depends: vroom, GenomicFiles
-Imports: dplyr, magrittr, BiocParallel
+Imports: dplyr, magrittr, BiocParallel, Biobase
 Maintainer: VJ Carey <stvjc@channing.harvard.edu>
 License: Artistic-2.0
 LazyLoad: yes

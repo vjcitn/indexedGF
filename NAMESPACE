@@ -2,6 +2,7 @@
 
 export(indexedGF)
 export(saveIGF)
+export(vrlist)
 export(vroomIn)
 export(whrurls)
 exportClasses(indexedGF)
